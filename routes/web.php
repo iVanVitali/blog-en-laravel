@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', 'PostController@index');
+Route::get('/', 'PostController@index')->name('home');
 
 Route::get('/posts/create', 'PostController@create');
 
@@ -23,15 +23,16 @@ Route::get('/posts/{post}', 'PostController@show');
 Route::post('/posts/{post}/comments', 'CommentController@store');
 
 
-// controller => PostsController
+Route::get('/register', 'RegistrationController@create');
 
-// eloquent model => Post
+Route::post('/register', 'RegistrationController@store')->name('register');
 
-// migration => crete_posts_table
+Route::get('/login', 'SessionController@create');
 
-Route::get('/tasks', 'TaskController@index');
+Route::post('/login', 'SessionController@store')->name('login');
 
-Route::get('/tasks/{task}', 'TaskController@show');
+Route::post('/logout', 'SessionController@destroy')->name('logout');
+
 
 
 
@@ -106,3 +107,7 @@ Route::get('/tasks/{id}', function ($id) {
     return view('tasks.show', compact('task'));
 });
 */
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index');

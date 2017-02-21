@@ -38,7 +38,7 @@
                     <img class="media-object" src="http://placehold.it/64x64" alt="">
                 </a>
                 <div class="media-body">
-                    <h4 class="media-heading">Usuario
+                    <h4 class="media-heading">{{ $comment->user->name }}
                         <small>{{ $comment->created_at->format('F j, Y H:i') }}</small>
                     </h4>
                     <p>{{ $comment->body }}</p>

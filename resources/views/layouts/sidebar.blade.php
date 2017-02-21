@@ -14,35 +14,18 @@
 
     <!-- Blog Categories Well -->
     <div class="well">
-        <h4>Categorias</h4>
-        <div class="row">
-            <div class="col-lg-6">
-                <ul class="list-unstyled">
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <ul class="list-unstyled">
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                    <li><a href="#">Category Name</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.col-lg-6 -->
-        </div>
+        <h4>Archivos</h4>
+        
+        <ol class="list-unstyled">
+            @foreach($archives as $stats)
+            
+                <li>
+                    <a href="/larav-el/blog/public/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">{{ $stats['month'].' '.$stats['year'].' ('.$stats['published'].')' }}</a>
+                </li>
+                
+            @endforeach
+        </ol>
+
         <!-- /.row -->
     </div>
 

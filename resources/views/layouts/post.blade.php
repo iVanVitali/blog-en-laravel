@@ -1,7 +1,7 @@
 
     <h2><a href="{{ url('/posts', $post->id) }}">{{ $post->title }}</a></h2>
     <p class="lead">
-        por <a href="#"></a>
+        por {{ $post->user->name }}
     </p>
     <h5><span class="glyphicon glyphicon-time"></span> Publicado {{ $post->created_at->toDayDateTimeString() }}.</h5>
     <hr>
