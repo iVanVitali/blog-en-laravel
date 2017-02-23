@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Mail\Welcome;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
@@ -29,6 +30,9 @@ class RegistrationController extends Controller
 
         // Loguear al usuario
         auth()->login($user);
+
+        // Enviar el mail de bienvenida
+        \Mail::to($user)->send(new Welcome($user));
 
         // Redireccionar a la pagina de inicio
         return redirect()->home();
