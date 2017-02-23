@@ -27,7 +27,6 @@ class SessionController extends Controller
 
         if (!auth()->attempt(request(['email', 'password']))) {
             return back()
-                //->withInput(request()->all())
                 ->with([
                 'message'   =>  'Tu credenciales son invalidos, verificalos y volve a intentar!'
             ]);

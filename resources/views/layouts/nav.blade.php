@@ -25,8 +25,6 @@
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Portofolio</a></li>
                 <li><a href="#">Contacto</a></li>
                 @if(Auth::check())
                 <li class="dropdown">
@@ -49,8 +47,8 @@
                     </ul>
                 </li>
                 @else
-                    <li><a href="{{ url('login') }}">Login</a></li>
-                    <li><a href="{{ url('register') }}">Register</a></li>
+                    <li><a href="{{ url('login') }}">Ingresar</a></li>
+                    <li><a href="{{ url('register') }}">Registrar</a></li>
                 @endif
             </ul>
 

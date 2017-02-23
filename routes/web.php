@@ -33,9 +33,17 @@ Route::post('/login', 'SessionController@store')->name('login');
 
 Route::post('/logout', 'SessionController@destroy')->name('logout');
 
+Route::get('/password/forgot', 'ForgotPasswordController@create');
+
+Route::post('/password/sendresetemail', 'ForgotPasswordController@store');
+
+Route::get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+
+Route::post('/password/reset', 'ResetPasswordController@resetPasswordUser')->name('password.request');
 
 
 
+//Route::get('/forgot-password', 'Auth\ForgotPasswordsController');
 
 
 
