@@ -15,13 +15,19 @@
     <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
 
     <!-- Blog CSS -->
-    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
 <body>
 
-
     @include('layouts.nav')
+
+    @if($flash = session('flash-message'))
+        <div id="flash-message" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ $flash }}
+        </div>
+    @endif
 
     <div class="blog-header">
         <div class="container">
@@ -54,6 +60,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/blog.js') }}"></script>
 
 </body>
 </html>

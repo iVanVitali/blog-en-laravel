@@ -83,13 +83,12 @@ class PostController extends Controller
                 'body'  =>  'required|min:10'
             ]);
 
-
         auth()->user()->publish(new Post(request(['title', 'body'])));
 
-
+        // Mostrar el mensaje instantaneo
+        session()->flash('flash-message','Te nuevo post fue publicado!');
 
         // Redireccionar
-
         return redirect('/');
     }
 }

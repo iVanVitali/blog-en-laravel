@@ -6,4 +6,38 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+/* Set gray background color and 100% height */
+.well {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+body {
+  /* background-color: #704918;
+   */
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #f1f1f1;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .well {
+    height: auto;
+    padding: 15px;
+  }
+}
+
+/* Set the position of flash-message */
+#flash-message {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
