@@ -2,7 +2,8 @@
 
    1.- Descargar el proyecto del git:
     
-    git clone https://github.com/maceuge/qplayLaravel.git
+    git clone https://github.com/iVanVitali/blog-en-laravel.git
+   
     
    2.- Una vez descargado correr el comando del composer dentro de la carpeta para descargar 
     las dependencias y generar la carpeta vendor
