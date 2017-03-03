@@ -6,9 +6,21 @@
     <!-- Title -->
     <h1>{{ $post->title }}</h1>
 
+    <!-- Tag -->
+    @if(count($post->tags))
+        <ul>
+            @foreach($post->tags as $tag)
+
+                <li><a href="{{ url('/posts/tags/'.$tag->name) }}">
+                    {{ $tag->name }}</a></li>
+
+            @endforeach
+        </ul>
+    @endif
+
     <!-- Author -->
     <p class="lead">
-        por <a href="#"></a>
+        por {{ $post->user->name }}
     </p>
 
     <hr>

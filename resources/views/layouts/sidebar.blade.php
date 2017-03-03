@@ -29,6 +29,24 @@
         <!-- /.row -->
     </div>
 
+    <!-- Blog Categories Well -->
+    <div class="well">
+        <h4>Etiquetas</h4>
+
+        <ol class="list-unstyled">
+            @foreach($tags as $tag)
+
+                <li>
+                    <a href=" {{ url('/posts/tags/'. $tag) }}">{{ $tag }}</a>
+                </li>
+
+            @endforeach
+        </ol>
+
+        <!-- /.row -->
+    </div>
+
+
     <!-- Side Widget Well -->
     <div class="well">
         <h4>Side Widget Well</h4>
